@@ -1,0 +1,144 @@
+.movies-header__logo {
+    width: 38px;
+    height: 38px;
+    background: url(../../images/header-logo.svg);
+}
+
+.movies-header {
+    max-width: 1280px;
+    margin: 18px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.movies-header_inactive {
+    display: none;
+}
+
+.movies-header__nav-items {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    max-width: 212px;
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+    margin-right: -62px;
+}
+
+.movies-header__link_active {
+    text-decoration: none;
+    color: #ffffff8c;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.movies-header__link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    transition: opacity 0.1s ease-in;
+}
+
+.movies-header__link:hover {
+    opacity: 0.7;
+}
+
+.movies-header__profile-button {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    background-color: #313131;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: opacity 0.1s ease-in;
+}
+
+.movies-header__profile-button_active {
+    color: #ffffff8c;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    background-color: #313131;
+    padding: 8px 20px;
+    border-radius: 20px;
+}
+
+.movies-header__profile-button:hover {
+    opacity: 0.7;
+}
+
+.burger {
+    height: 23px;
+    width: 28px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    z-index: 11;
+}
+
+.burger__line {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #FFF;
+}
+
+.burger__line_first_opened {
+    transform: rotate(45deg);
+}
+
+.burger__line_first {
+    transform-origin: 0% 50%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.burger__line_second {
+    transition: transform 0.2s ease-in-out;
+}
+
+.burger__line_second_opened {
+    transform: scaleY(0);
+}
+
+.burger__line_third {
+    transform-origin: 0% 50%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.burger__line_third_opened {
+    transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+    .movies-header {
+        margin: 18px 30px;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .movies-header__nav-items {
+        display: none;
+    }
+
+    .movies-header__profile-button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .movies-header {
+        margin: 18px 14px;
+    }
+}
