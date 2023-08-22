@@ -56,4 +56,21 @@
     .header {
         margin: 18px 14px;
     }
+
+    .header__auth-buttons {
+        column-gap: 14px;
+    }
+
+    .header__auth-button {
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 16px;
+    }
+
+    .header__auth-button_green-theme {
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 16px;
+        padding: 5px 12px;
+    }
 }

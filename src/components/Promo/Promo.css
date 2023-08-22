@@ -21,7 +21,7 @@
 
 @media screen and (max-width: 768px) {
   .promo {
-    margin: 20px 20px 0;
+    margin: 40px 20px 0;
   }
 
   .promo__title {
@@ -34,7 +34,7 @@
 @media screen and (max-width: 539px) {
   .promo {
     max-width: calc(100% - 28px);
-    margin: 14px auto 0;
+    margin: 33px auto 0;
   }
 
   .promo__title {

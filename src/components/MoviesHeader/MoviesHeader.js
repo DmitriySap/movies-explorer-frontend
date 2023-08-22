@@ -14,7 +14,7 @@ function MoviesHeader() {
         setBurgerActive((state) => !state);
         if (isOpened) {
             document.body.style.overflow = 'auto';
-        } else {
+        } if (!isOpened) {
             document.body.style.overflow = 'hidden';
         }
     };

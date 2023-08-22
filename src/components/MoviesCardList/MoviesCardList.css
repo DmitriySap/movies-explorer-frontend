@@ -6,12 +6,6 @@
     gap: 58px 30px;
 }
 
-@media screen and (max-width: 1296px) {
-    .card-list {
-        max-width: 960px;
-    }
-}
-
 @media screen and (max-width: 1116px) {
     .card-list {
         max-width: 810px;

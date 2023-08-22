@@ -32,14 +32,6 @@ function App() {
                     <Header isLogged={isLogged} /> 
                 ) : null
             }
-            { 
-                (location.pathname !== ('/' && '/sign-in') && location.pathname !== '/sign-up') ||
-                location.pathname === '/movies' ||
-                location.pathname === '/saved-movies' ||
-                location.pathname === '/profile'? (
-                    <MoviesHeader /> 
-                ) : null
-            }
             <div className="body">
                 <Routes>
                 <Route path="/" element={<Main />} />

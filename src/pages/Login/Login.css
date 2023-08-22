@@ -9,6 +9,7 @@
 .signin__logo {
     width: 38px;
     height: 38px;
+    background: url(../../images/header-logo.svg);
 }
 
 .signin__title {
@@ -46,7 +47,7 @@
 }
 
 .signin__button {
-    margin: 159px 0 16px;
+    margin: 165px 0 16px;
     background-color: #4285F4;
     border: none;
     border-radius: 3px;
@@ -106,7 +107,7 @@
         font-size: 12px;
         font-weight: 500;
         padding: 15px 68px;
-        margin: 167px 0 14px;
+        margin: 253px 0 14px;
     }
 
     .signin__submit-text {

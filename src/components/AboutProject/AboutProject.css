@@ -4,7 +4,7 @@
 }
 
 .about__title {
-    margin: 110px auto 0;
+    margin: 112px auto 0;
     padding: 0 0 23px;
     text-align: left;
     border-bottom: solid 1px white;
@@ -26,6 +26,7 @@
     color: #FFF;
     font-weight: 400;
     letter-spacing: 0;
+    line-height: 25px;
     font-size: 20px;
     letter-spacing: -0.04em;
     margin: 47px 0 26px;
@@ -116,7 +117,7 @@
 
 @media screen and (max-width: 539px) {
     .about {
-        max-width: calc(100% - 255px);
+        max-width: calc(100% - 28px);
         margin: 0 auto;
     }
 
@@ -129,6 +130,8 @@
 
     .about__info {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .about__info-item {
@@ -162,7 +165,7 @@
     }
 
     .about__step_frontend {
-        width: 184px;
+        width: 410px;
     }
     
     .about__step-title {
@@ -203,5 +206,13 @@
 
     .about__steps {
         margin: 20px 0 70px;
+    }
+
+    .about__step_backend {
+        width: 100px;
+    }
+    
+    .about__step_frontend {
+        width: 184px;
     }
 }

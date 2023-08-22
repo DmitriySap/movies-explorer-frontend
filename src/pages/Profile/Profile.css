@@ -1,4 +1,9 @@
 .profile {
+    max-width: calc(100% - 140px);
+    margin: 0 auto;
+}
+
+.profile__body {
     max-width: 410px;
     margin: 92px auto 0;
     display: flex;
@@ -48,7 +53,7 @@
     font-size: 13px;
     font-weight: 400;
     padding: 0;
-    margin: 204px 0 16px;
+    margin: 210px 0 16px;
     cursor: pointer;
     transition: opacity 0.1s ease-in;
 }
@@ -66,6 +71,7 @@
     padding: 0;
     cursor: pointer;
     transition: opacity 0.1s ease-in;
+    text-decoration: none;
 }
 
 .profile__logout-button:hover {
@@ -73,9 +79,13 @@
 }
 
 @media screen and (max-width: 768px) {
-   .profile {
-        margin-top: 218px;
-   } 
+    .profile {
+        max-width: calc(100% - 30px);
+    }
+
+    .profile__body {
+        margin: 256px auto;
+   }
 
    .profile__content {
         margin-top: 80px;
@@ -84,4 +94,24 @@
    .profile__button {
     margin-top: 194px;
    }
+}
+
+@media screen and (max-width: 320px) {
+    .profile__body {
+        max-width: calc(100% - 30px);
+        margin: 89px auto;
+    }
+
+    .profile__content {
+        margin-top: 66px;
+    }
+
+    .profile__button {
+        margin-top: 363px;
+        font-size: 12px;
+    }
+
+    .profile__logout-button {
+        font-size: 12px;
+    }
 }
