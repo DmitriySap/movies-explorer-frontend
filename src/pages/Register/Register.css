@@ -1,0 +1,124 @@
+.signup {
+    max-width: 396px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 70px auto;
+}
+
+.signup__logo {
+    width: 38px;
+    height: 38px;
+    background: url(../../images/header-logo.svg);
+}
+
+.signup__title {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 40px 0;
+}
+
+.signup__form {
+    width: 100%;
+}
+
+.signup__input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup__label {
+    font-weight: 400;
+    font-size: 10px;
+    color: #8B8B8B;
+    margin-bottom: 10px;
+}
+
+.signup__input {
+    padding: 15px;
+    background-color: #2F2F2F;
+    border-radius: 8px;
+    border: none;
+    margin: 0 0 20px 0;
+    color: #FFF;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.signup__button {
+    margin: 78px 0 16px;
+    background-color: #4285F4;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    padding: 14px 125px;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.08s ease-in;
+}
+
+.signup__button:hover {
+    opacity: 0.65;
+}
+
+.signup__submit-text {
+    color: #8B8B8B;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+}
+
+.signup__login-link {
+    color: #4285F4;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    text-decoration: none;
+    transition: opacity 0.1s ease-in;
+}
+
+.signup__login-link:hover {
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+    .signup {
+        margin: 232px auto;
+    }
+
+    .signup__button {
+        margin-top: 69px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .signup {
+        max-width: calc(100% - 60px);
+        margin: 56px auto 30px;
+        align-items: center;
+    }
+
+    .signup__title {
+        margin: 50px 0 80px;
+    }
+
+    .signup__button {
+        max-width: 100%;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 15px 68px;
+        margin: 167px 0 14px;
+    }
+
+    .signup__submit-text {
+        font-size: 12px;
+    }
+
+    .signup__login-link {
+        font-size: 12px;
+    }
+}
