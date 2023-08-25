@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Login.css';
 import { Link } from 'react-router-dom';
 
-function Login() {
+const Login = ( { isLogged, onAuthUser, authError, onSetAuthError } ) => {
+
     return (
         <section className="signin">
             <Link className="signin__logo" to="/" title="На главную" />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Main from '../../pages/Main/Main';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
@@ -13,11 +13,51 @@ import { ProtectedRoute } from '../ProtectedRoute/ProtectedRoute';
 import scroll from '../../utils/scroll';
 import PageNotFound from '../../pages/PageNotFound/PageNotFound';
 import MoviesHeader from '../MoviesHeader/MoviesHeader';
+import { apiMovies } from '../../utils/MoviesApi';
+import { moviesStorage } from '../../utils/storage';
 
-function App() {
-    function isLogged() {
-        return true;
+const App = () => {
+    const [isLogged, setIsLogged] = useState(false);
+    const [movies, setMovies] = useState([]);
+    const [isChecked, setIsChecked] = useState(false);
+    const [searchedMovies, setSearchedMovies] = useState('');
+    const [isFilteredMovies, setIsFilteredMovies] = useState([]);
+
+    const handleGetApiMovies = () => {
+        apiMovies.getMovies().then((res) => {
+        setMovies(() => res);
+        });
     };
+
+    const handleToggleCheckbox = () => {
+        setIsChecked((prev) => !prev);
+    };
+
+    const handleSearchMovies = (data) => {
+        setSearchedMovies(data);
+        filteredReqMovies(data);
+    };
+
+    // хардкод для проверки изменения визуала хедера
+    const handleToggleLoginStatus = () => {
+        setIsLogged((prev) => !prev);
+    };
+
+    const filteredReqMovies = (data) => {
+        const filteredMovies = movies.filter((item) => {
+        return (
+            item.nameRU.toLowerCase().includes(data.toLowerCase()) ||
+            item.nameEN.toLowerCase().includes(data.toLowerCase())
+        );
+        });
+        moviesStorage.setDataStorage(filteredMovies);
+        setIsFilteredMovies(filteredMovies);
+    };
+
+    useEffect(() => {
+        handleGetApiMovies();
+    }, []);
+
     //плавный скролл до якоря
     scroll();
     let location = useLocation();
@@ -35,10 +75,16 @@ function App() {
             <div className="body">
                 <Routes>
                 <Route path="/" element={<Main />} />
-                <Route path="sign-in" element={<Login />} />
-                <Route path="sign-up" element={<Register />} />
+                <Route path="signin" element={<Login />} />
+                <Route path="signup" element={<Register />} />
                 <Route path="profile" element={<Profile />} />
-                <Route path="movies" element={<Movies />} />
+                <Route path="movies" element={<Movies 
+                    movies={movies}
+                    isChecked={isChecked}
+                    onToggleCheckbox={handleToggleCheckbox}
+                    onSearchMovies={handleSearchMovies}
+                    onGetApiMovies={handleGetApiMovies}
+                />} />
                 <Route path="saved-movies" element={<SavedMovies />} />
                 <Route
                     path="*" element={<PageNotFound />}
