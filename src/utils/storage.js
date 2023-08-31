@@ -22,6 +22,6 @@ class Storage {
   const moviesStorage = new Storage('movies');
   const searchReqStorage = new Storage('searchReq');
   const checkboxStatus = new Storage('checkboxReq');
-  const jwtToken = new Storage('token');
+  const jwtToken = new Storage('super-secret');
   
   export { moviesStorage, searchReqStorage, checkboxStatus, jwtToken };

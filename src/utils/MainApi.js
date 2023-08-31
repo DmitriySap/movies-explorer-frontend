@@ -16,7 +16,7 @@ class MainApi {
     }
   
     async getSavedMovies() {
-      this._token = JSON.parse(localStorage.getItem('token'));
+      this._token = JSON.parse(localStorage.getItem('super-secret'));
       const res = await fetch(`${this._url}/movies`, {
         headers: {
           Accept: 'application/json',
@@ -28,7 +28,7 @@ class MainApi {
     }
   
     async savedMovie(data) {
-      this._token = JSON.parse(localStorage.getItem('token'));
+      this._token = JSON.parse(localStorage.getItem('super-secret'));
       const res = await fetch(`${this._url}/movies`, {
         method: 'POST',
         headers: {
@@ -42,7 +42,7 @@ class MainApi {
     }
   
     async deleteMovie(id) {
-      this._token = JSON.parse(localStorage.getItem('token'));
+      this._token = JSON.parse(localStorage.getItem('super-secret'));
       const res = await fetch(`${this._url}/movies/${id}`, {
         method: 'DELETE',
         headers: {

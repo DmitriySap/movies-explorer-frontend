@@ -2,7 +2,7 @@ class Auth {
     constructor(settings) {
       this._url = settings.url;
       this._headers = settings.headers;
-      this._token = JSON.parse(localStorage.getItem('token'));
+      this._token = JSON.parse(localStorage.getItem('super-secret'));
     }
   
     async _getResponseData(res) {

@@ -46,6 +46,10 @@
     font-size: 13px;
 }
 
+.signin__input_red {
+    color: #EE3465;
+}
+
 .signin__button {
     margin: 165px 0 16px;
     background-color: #4285F4;
@@ -70,6 +74,13 @@
     font-weight: 400;
     margin: 0;
     text-align: center;
+}
+
+.signin__submit-error {
+    font-size: 10px;
+    font-weight: 400;
+    color: #EE3465;
+    margin: -10px 0 0 0;
 }
 
 .signin__register-link {

@@ -11,12 +11,12 @@ function Header(isLogged) {
             <nav className="header__auth">
                 <ul className="header__auth-buttons">
                     <li>
-                        <Link className="header__auth-button" to="/sign-up">
+                        <Link className="header__auth-button" to="/signup">
                             Регистрация
                         </Link>
                     </li> 
                     <li>
-                        <Link className="header__auth-button header__auth-button_green-theme" to="/sign-in">
+                        <Link className="header__auth-button header__auth-button_green-theme" to="/signin">
                             Войти
                         </Link>
                     </li>   

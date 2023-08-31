@@ -4,14 +4,19 @@ import SearchForm from '../../components/SearchForm/SearchForm';
 import MoviesCardList from '../../components/MoviesCardList/MoviesCardList';
 import MoviesHeader from '../../components/MoviesHeader/MoviesHeader';
 
-const Movies = ({ movies, isChecked, onToggleCheckbox, onSearchMovies, onGetApiMovies }) => {
-    const handleGetApiMovies = () => {
-        onGetApiMovies()
-    }
+const Movies = ({ movies, userMovies, onDislikeMovies, onLikeMovie, errorStatus, onGetSavedMovies, isChecked, onToggleCheckbox, onSearchMovies, onGetApiMovies, isLoading, searchRequire, moviesInStorage, onPaginateMovies, onGetStorageData, onCheckboxToggle }) => {
+     useEffect(() => {
+        onGetApiMovies();
+        onGetStorageData();
+    }, [])
+
+    const handlerPagitateMovies = () => {
+        onPaginateMovies();
+      };
 
     useEffect(() => {
-        onGetApiMovies();
-    })
+        onCheckboxToggle()
+    }, [isChecked])
 
     return (
         <section className="movies">
@@ -21,8 +26,20 @@ const Movies = ({ movies, isChecked, onToggleCheckbox, onSearchMovies, onGetApiM
                 onToggleCheckbox={onToggleCheckbox}
                 onSearchMovies={onSearchMovies}
             />
-            <MoviesCardList movies={movies} />
-            <button className="movies__more-button">Ещё</button>
+            {searchRequire ? (
+                <MoviesCardList 
+                    movies={movies}
+                    isLoading={isLoading}
+                    errorStatus={errorStatus}
+                    onLikeMovie={onLikeMovie}
+                    onGetSavedMovies={onGetSavedMovies}
+                    userMovies={userMovies}
+                    onDislikeMovies={onDislikeMovies}
+                />
+            ) : null}
+            {moviesInStorage.length !== movies.length && moviesInStorage.length > 4 && (
+                <button className="movies__more-button" onClick={handlerPagitateMovies}>Ещё</button>
+            )}
         </section>
     )
 }
