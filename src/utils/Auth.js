@@ -58,7 +58,7 @@ class Auth {
   }
   
   export const authApi = new Auth({
-    url: 'http://diploma.saprykind.nomoredomainsicu.ru',
+    url: 'https://diploma.saprykind.nomoredomainsicu.ru',
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
