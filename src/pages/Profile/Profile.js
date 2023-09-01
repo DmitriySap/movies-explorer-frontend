@@ -45,7 +45,6 @@ const Profile = ({ authError, onLogOutUser, onSetUserInfo, onSetErrorInfo, }) =>
 
     return (
         <section className="profile">
-            <MoviesHeader />
             <div className="profile__body">
                 <h1 className="profile__title">Привет, {userInfo.name}!</h1>
                 <form className="profile__content" onSubmit={handleSumbitSetUserInfo}>

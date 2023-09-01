@@ -63,7 +63,6 @@ const SavedMovies = ({ userMovies,
 
     return (
         <section className="saved-movies">
-            <MoviesHeader />
             <SearchForm 
                 userSearchReq={userSearchReq}
                 onToggleCheckbox={onToggleCheckbox}

@@ -5,8 +5,8 @@
 }
 
 .movies-header {
-    width: 100%;
-    margin: 18px 0;
+    width: calc(100% - 140px);
+    margin: 18px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -128,7 +128,7 @@
 
 @media screen and (max-width: 768px) {
     .movies-header {
-        max-width: calc(100% - 30px);
+        width: calc(100% - 60px);
         margin: 18px auto;
     }
 
@@ -151,7 +151,7 @@
 
 @media screen and (max-width: 525px) {
     .movies-header {
-        margin: 18px 14px;
+        width: calc(100% - 30px);
     }
 }
 

@@ -20,7 +20,7 @@ function MoviesHeader() {
     };
 
     return (
-        <div className={`${location !== '/' ? 'movies-header' : 'movies-header_inactive'}`}>
+        <div className="movies-header">
             <BurgerMenu burgerActive={burgerActive} setBurgerActive={setBurgerActive} />
             <Link className="movies-header__logo" to="/" title="На главную" />
             <ul className="movies-header__nav-items">

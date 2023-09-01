@@ -70,6 +70,7 @@ const App = () => {
       setUserInfo({});
       setMovies([]);
       setSearchedMovies('');
+      setIsChecked(false);
       setIsFilteredMovies([]);
       setSlicedMovies([]);
       setSavedUserMovies([]);
@@ -283,13 +284,11 @@ const App = () => {
         <Preloader />
       ) : (
         <CurrentUserContext.Provider value = {userInfo}>
-            { 
-                location.pathname === '/' ||
-                location.pathname === '/movies' ||
-                location.pathname === '/saved-movies' ||
-                location.pathname === '/profile'? (
-                    <Header isLogged={isLogged} /> 
-                ) : null
+            {isLogged ? (
+              <MoviesHeader isLogged={isLogged} />
+            ) : (
+              <Header />
+            )
             }
             <div className="body">
                 <Routes>

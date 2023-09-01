@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import './Movies.css';
 import SearchForm from '../../components/SearchForm/SearchForm';
 import MoviesCardList from '../../components/MoviesCardList/MoviesCardList';
-import MoviesHeader from '../../components/MoviesHeader/MoviesHeader';
 
 const Movies = ({ movies, userMovies, onDislikeMovies, onLikeMovie, errorStatus, onGetSavedMovies, isChecked, onToggleCheckbox, onSearchMovies, onGetApiMovies, isLoading, searchRequire, moviesInStorage, onPaginateMovies, onGetStorageData, onCheckboxToggle }) => {
      useEffect(() => {
@@ -20,7 +19,6 @@ const Movies = ({ movies, userMovies, onDislikeMovies, onLikeMovie, errorStatus,
 
     return (
         <section className="movies">
-            <MoviesHeader />
             <SearchForm 
                 isChecked={isChecked}
                 onToggleCheckbox={onToggleCheckbox}
