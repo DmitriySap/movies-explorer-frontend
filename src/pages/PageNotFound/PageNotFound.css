@@ -29,6 +29,9 @@
     font-weight: 400;
     transition: opacity 0.1s ease-in;
     margin: 0 0 60px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .error-page__button:hover {

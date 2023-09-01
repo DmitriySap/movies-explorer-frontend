@@ -92,7 +92,7 @@ const App = () => {
         checkboxStatus.setDataStorage(isChecked);
       };
 
-    const handlerToggleResize = () => {
+      const handlerToggleResize = () => {
         if (window.innerWidth > 1280) {
           setResizeState(DESKTOP_CARD_QUANTITY);
         } else if (window.innerWidth < 1280 && window.innerWidth > 768) {
@@ -264,16 +264,16 @@ const App = () => {
     }, []);
 
     useEffect(() => {
-        window.addEventListener('resize', handlerToggleResize);
-    
-        return () => {
-          window.removeEventListener('resize', handlerToggleResize);
-        };
-      }, []);
+      window.addEventListener('resize', handlerToggleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handlerToggleResize);
+      };
+    }, []);
 
-      useEffect(() => {
-        handleChechToken();
-      }, [isLogged]);
+    useEffect(() => {
+      handleChechToken();
+    }, [isLogged]);
 
     //плавный скролл до якоря
     scroll();
@@ -284,7 +284,7 @@ const App = () => {
         <Preloader />
       ) : (
         <CurrentUserContext.Provider value = {userInfo}>
-            {isLogged ? (
+            {isLogged  ? (
               <MoviesHeader isLogged={isLogged} />
             ) : (
               <Header />

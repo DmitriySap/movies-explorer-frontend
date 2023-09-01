@@ -18,6 +18,7 @@ const SearchForm = ({ isChecked,
 
     const handleToggleCheckbox = () => {
         onToggleCheckbox();
+        onSearchMovies(isSearch);
     };
 
     const handleChangleInput = (evt) => {
