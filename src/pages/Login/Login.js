@@ -35,6 +35,7 @@ const Login = ( { isLogged, onAuthUser, authError, onSetAuthError } ) => {
                         onChange={handleChange}
                         value={values.email || ''}
                     ></input>
+                    <span className="signin__input-error">{errors.email}</span>
                 </div>
                 <div className="signin__input-container">
                     <label className="signin__label" type="password" id="password">Пароль</label>
@@ -48,6 +49,7 @@ const Login = ( { isLogged, onAuthUser, authError, onSetAuthError } ) => {
                         onChange={handleChange}
                         value={values.password || ''}
                     ></input>
+                    <span className="signin__input-error">{errors.password}</span>
                     <span className="signin__submit-error">{authError}</span>
                 </div>
                 <button className={`signin__button ${!isValid ? 'signin__button_disabled' : null}`} disabled={!isValid}>Войти</button>
