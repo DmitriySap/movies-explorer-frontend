@@ -3,7 +3,7 @@ const REGEXP_EMAIL = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-
 
 const MESSAGE_EDIT_COMPLETE = 'Данные изменены';
 const TIME_DURATION = 40;
-const DESKTOP_CARD_QUANTITY = { cards: 16, more: 4 };
+const DESKTOP_CARD_QUANTITY = { cards: 12, more: 3 };
 const TABLET_CARD_QUANTITY = { cards: 8, more: 2 };
 const MOBILE_CARD_QUANTITY = { cards: 5, more: 2 };
 

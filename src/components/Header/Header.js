@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
-function Header() {
+const Header = () => {
+    const location = useLocation();
+
     return (
-        <header className="header">
+        <header className={`${location.pathname === '/' ? 'header' : 'header_inactive'}`}>
             <Link className="header__logo" to="/" title="На главную" />
             <nav className="header__auth">
                 <ul className="header__auth-buttons">

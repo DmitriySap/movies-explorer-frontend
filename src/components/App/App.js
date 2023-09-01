@@ -95,9 +95,9 @@ const App = () => {
       const handlerToggleResize = () => {
         if (window.innerWidth > 1280) {
           setResizeState(DESKTOP_CARD_QUANTITY);
-        } else if (window.innerWidth < 1280 && window.innerWidth > 768) {
+        } else if (window.innerWidth < 1280 && window.innerWidth >= 768) {
           setResizeState(TABLET_CARD_QUANTITY);
-        } else if (window.innerWidth <= 768) {
+        } else if (window.innerWidth < 768) {
           setResizeState(MOBILE_CARD_QUANTITY);
         }
       };
@@ -267,7 +267,7 @@ const App = () => {
       window.addEventListener('resize', handlerToggleResize);
   
       return () => {
-        window.removeEventListener('resize', handlerToggleResize);
+        window.addEventListener('resize', handlerToggleResize);
       };
     }, []);
 
@@ -285,7 +285,7 @@ const App = () => {
       ) : (
         <CurrentUserContext.Provider value = {userInfo}>
             {isLogged  ? (
-              <MoviesHeader isLogged={isLogged} />
+              <MoviesHeader />
             ) : (
               <Header />
             )
