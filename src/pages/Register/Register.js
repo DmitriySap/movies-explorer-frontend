@@ -39,6 +39,7 @@ const Register = ({ isLogged, authError, onRegisterUser, onSetAuthError }) => {
                         onChange={handleChange}
                         name="name"
                     ></input>
+                    <span className="signup__input-error">{errors.name}</span>
                 </div>
                 <div className="signup__input-container">
                     <label className="signup__label" type="email" id="email">E-mail</label>
@@ -54,6 +55,7 @@ const Register = ({ isLogged, authError, onRegisterUser, onSetAuthError }) => {
                         onChange={handleChange}
                         name="email"
                     ></input>
+                    <span className="signup__input-error">{errors.email}</span>
                 </div>
                 <div className="signup__input-container">
                     <label className="signup__label" type="password" id="password">Пароль</label>
@@ -67,6 +69,7 @@ const Register = ({ isLogged, authError, onRegisterUser, onSetAuthError }) => {
                         onChange={handleChange}
                         value={values.password || ''}
                     ></input>
+                    <span className="signup__input-error">{errors.password}</span>
                     <span className="signup__submit-error">{authError}</span>
                 </div>
                 <button className={`signup__button ${!isValid ? 'signup__button_disabled' : null}`} disabled={!isValid}>Зарегистрироваться</button>

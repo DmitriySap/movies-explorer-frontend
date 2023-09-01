@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import './MoviesHeader.css';
 
-function MoviesHeader() {
+const MoviesHeader = () => {
     const location = useLocation().pathname;
 
     const [isOpened, setOpened] = useState(false);
