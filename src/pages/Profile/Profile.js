@@ -74,7 +74,7 @@ const Profile = ({ authError, onLogOutUser, onSetUserInfo, onSetErrorInfo, }) =>
                         'profile__edit-message_complete'
                         : null
                     }`}>{authError}</span>
-                    <button className="profile__button" disabled={!isValid}>Редактировать</button>
+                    <button className={`profile__button ${!isValid ? 'profile__button_disabled' : null}`} disabled={!isValid}>Редактировать</button>
                 </form>
                 <Link className="profile__logout-button" to='/' title="На главную" onClick={handlerLogOutUser}>Выйти из аккаунта</Link>
             </div>

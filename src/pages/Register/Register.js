@@ -69,7 +69,7 @@ const Register = ({ isLogged, authError, onRegisterUser, onSetAuthError }) => {
                     ></input>
                     <span className="signup__submit-error">{authError}</span>
                 </div>
-                <button className="signup__button" disabled={!isValid}>Зарегистрироваться</button>
+                <button className={`signup__button ${!isValid ? 'signup__button_disabled' : null}`} disabled={!isValid}>Зарегистрироваться</button>
                 <p className="signup__submit-text">Уже зарегистрированы? <Link className="signup__login-link" to="/signin">Войти</Link></p>
             </form>
         </section>

@@ -50,7 +50,7 @@ const Login = ( { isLogged, onAuthUser, authError, onSetAuthError } ) => {
                     ></input>
                     <span className="signin__submit-error">{authError}</span>
                 </div>
-                <button className="signin__button" disabled={!isValid}>Войти</button>
+                <button className={`signin__button ${!isValid ? 'signin__button_disabled' : null}`} disabled={!isValid}>Войти</button>
                 <p className="signin__submit-text">Ещё не зарегистрированы? <Link className="signin__register-link" to="/signup">Регистрация</Link></p>
             </form>
         </section>
