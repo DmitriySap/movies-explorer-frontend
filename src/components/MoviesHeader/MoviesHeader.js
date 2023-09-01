@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import './MoviesHeader.css';
 
-function MoviesHeader() {
+const MoviesHeader = () => {
     const location = useLocation().pathname;
 
     const [isOpened, setOpened] = useState(false);
@@ -20,7 +20,7 @@ function MoviesHeader() {
     };
 
     return (
-        <div className={`${location !== '/' ? 'movies-header' : 'movies-header_inactive'}`}>
+        <div className="movies-header">
             <BurgerMenu burgerActive={burgerActive} setBurgerActive={setBurgerActive} />
             <Link className="movies-header__logo" to="/" title="На главную" />
             <ul className="movies-header__nav-items">
