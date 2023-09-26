@@ -1,0 +1,157 @@
+.main {
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../images/main-bg-square.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 900px;
+}
+
+.main__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 630px;
+}
+
+.main__title {
+    font-weight: 500;
+    font-size: 52px;
+    line-height: 62px;
+    color: #FFF;
+    margin: 0 0 28px;
+    text-align: center;
+}
+
+.main__subtitle {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFF;
+    margin: 0 0 40px;
+    text-align: center;
+}
+
+.main__button-container {
+    max-width: 428px;
+}
+
+.main__button {
+    background-color: #3C91CA;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 48px;
+    width: 200px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    cursor: pointer;
+    transition: opacity 0.1s ease-in;
+}
+
+.main__button:hover {
+    opacity: 0.7;
+}
+
+.main__button_white {
+    background-color: transparent;
+    border: 2px solid #FFF;
+    margin-left: 28px;
+    text-decoration: none;
+    padding: 12px 65.74px;
+}
+
+@media screen and (max-width: 785px) {
+    .main__container {
+        width: calc(100% - 100px);
+    }
+
+    .main__title {
+        font-size: 44px;
+    }
+    
+    .main__subtitle {
+        font-size: 17px;
+    }
+
+    .main__button {
+        width: 150.02px;
+        font-size: 14px;
+        padding: 10px 10px;
+    }
+
+    .main__button_white {
+        padding: 10px 47.91px;
+    }
+}
+
+@media screen and (max-width: 645px) {
+    .main {
+        min-height: 700px;
+    }
+
+    .main__title {
+        font-size: 35px;
+        line-height: 40px;
+    }
+    
+    .main__subtitle {
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .main {
+        min-height: 600px;
+    }
+
+    .main__title {
+        font-size: 25px;
+        line-height: 40px;
+        margin-bottom: 10px;
+    }
+    
+    .main__subtitle {
+        font-size: 11px;
+        line-height: 21px;
+    }
+
+    .main__button {
+        width: 120px;
+        font-size: 11px;
+        padding: 7px 7px;
+        line-height: 18px;
+    }
+
+    .main__button_white {
+        padding: 7px 38.29px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .main__button-container {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main__button {
+        width: 150px;
+        padding: 7px 7px;
+    }
+
+    .main__button_white {
+        padding: 0;
+        text-align: center;
+        margin: 0;
+        padding: 5px 0;
+    }
+}

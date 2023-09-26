@@ -1,0 +1,107 @@
+.price-header {
+    width: 100%;
+    margin: 48px 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-header__logo {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0;
+}
+
+.price-header__link {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    cursor: pointer;
+    transition: opacity 0.1s ease-in;
+}
+
+.price-header__link:hover {
+    opacity: 0.7;
+}
+
+.price-header__link_active {
+    padding: 0 0 5px;
+    border-bottom: 1px solid #ffffff;
+    cursor: default;
+}
+
+.price-header__link_active:hover {
+    opacity: 1;
+}
+
+.price-header__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 51px;
+}
+
+.price-burger-button {
+    height: 23px;
+    width: 28px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    display: none;
+    z-index: 111;
+}
+
+.price-burger-button__line {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #FFF;
+    position: absolute;
+}
+
+.price-burger-button__line_first_opened {
+    width: 28px;
+    bottom: 10px;
+    transform: rotate(45deg);
+}
+
+.price-burger-button__line_first {
+    transition: transform 0.4s ease-in-out;
+}
+
+.price-burger-button__line_second {
+    top: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.price-burger-button__line_second_opened {
+    transform: scaleY(0);
+}
+
+.price-burger-button__line_third {
+    top: 20px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.price-burger-button__line_third_opened {
+    width: 28px;
+    top: 10px;
+    transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 980px) {
+    .price-header__list {
+        display: none;
+    }
+
+    .price-burger-button {
+        display: block;
+    }
+}

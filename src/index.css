@@ -1,11 +1,10 @@
 @import url(./vendor/normalize.css);
-@import url(./vendor/fonts/inter.css);
+@import url(./vendor/fonts/montserrat.css);
 
 .body {
-    background-color: #202020;
+    background-color: #31394D;
     margin: 0 auto;
     width: 100%;
-    max-width: 1280px;
-    font-family: 'Inter', 'sans-serif', Arial;
-    position: relative;
+    max-width: 1920px;
+    font-family: 'Montserrat', 'sans-serif', Arial;
 }

@@ -1,0 +1,236 @@
+.reviews {
+    max-width: 1480px;
+    margin: 140px auto ;
+}
+
+.reviews__title {
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30.5px;
+    color: #FFF;
+    letter-spacing: 1px;
+    text-align: left;
+    margin: 0;
+}
+
+.reviews__title-span {
+    display: inline-block;
+    margin: 0;
+}
+
+.reviews__title-span::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 210px);
+    border-top: 2px solid #FFF;
+    margin-top: .6em;
+    margin-left: 32px;
+    opacity: 0.13;
+}
+
+.reviews__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    list-style: none;
+    margin: 40px 0 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.reviews__list-el {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 20px 18px;
+}
+
+.reviews__list-el-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reviews__list-el-header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews__list-el-header-image {
+    width: 44px;
+    height: 44px;
+    margin-right: 20px;
+    border-radius: 50%;
+    background-color: #afafaf;
+}
+
+.reviews__list-el-header-name {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 23px;
+    color: black;
+    margin: 0;
+}
+
+.reviews__list-text {
+    font-size: 18px;
+    font-weight: 300;
+    color: #222;
+    margin: 11px 0 0;
+}
+
+.reviews__list-el-header-grade {
+    width: 100px;
+    height: 20px;
+    background-color: transparent;
+}
+
+.reviews__link-container {
+    border: 1px solid #FFF;
+    border-radius: 10px;
+    margin: 40px 0 0;
+    transition: opacity 0.1s ease-in;
+}
+
+.reviews__link-container:hover {
+    opacity: 0.7;
+}
+
+.reviews__more-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFF;
+    padding: 9.37px 28px;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 34px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.reviews__more-link::after {
+    content: '';
+    background-image: url('../../images/portfolio-link.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 53.27px;
+    height: 53.27px;
+}
+
+@media screen and (max-width: 1560px) {
+    .reviews {
+        width: calc(100% - 100px);
+    }
+
+    .reviews__list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .reviews__list {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .reviews__more-link {
+        font-size: 22px;
+        line-height: 25px;
+    }
+
+    .reviews__more-link::after {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .reviews__list-el-header-name {
+        font-size: 15px;
+    }
+
+    .reviews__list-el-header-image {
+        width: 35px;
+        height: 35px;
+        margin-right: 13px;
+    }
+
+    .reviews__list-text {
+        font-size: 15px;
+    }
+
+    .reviews__list-el-header-grade {
+        width: 80px;
+        height: 15px;
+    }
+}
+
+@media screen and (max-width: 705px) {
+    .reviews__more-link {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .reviews__more-link::after {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .reviews__more-link {
+        font-size: 11px;
+        line-height: 23px;
+        padding-bottom: 8px;
+    }
+
+    .reviews__more-link::after {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .reviews__list-el-header-name {
+        font-size: 12px;
+    }
+
+    .reviews__list-el-header-image {
+        width: 35px;
+        height: 35px;
+        margin-right: 7px;
+    }
+
+    .reviews__list-text {
+        font-size: 15px;
+    }
+
+    .reviews__list-el-header-grade {
+        width: 60px;
+        height: 10px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .reviews {
+        width: calc(100% - 30px);
+    }
+
+    .reviews__title-span {
+        font-size: 18px;
+    }
+
+    .reviews__title-span::after {
+        margin-top: .8em;
+        width: calc(100% - 170px);
+    }
+}

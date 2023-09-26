@@ -1,20 +1,40 @@
-import Promo from '../../components/Promo/Promo'
-import AboutMe from '../../components/AboutMe/AboutMe';
-import NavTab from '../../components/NavTab/NavTab';
-import AboutProject from '../../components/AboutProject/AboutProject';
-import Techs from '../../components/Techs/Techs';
+import React, { useState, useEffect } from 'react';
+import Header from '../../components/Header/Header';
+import MainPage from '../../components/Main/Main';
+import Price from '../../components/Price/Price';
 import Portfolio from '../../components/Portfolio/Portfolio';
+import Reviews from '../../components/Reviews/Reviews';
+import Contacts from '../../components/Contacts/Contacts';
+import Footer from '../../components/Footer/Footer';
+import Upward from '../../utils/Upward/Upward';
+import ImagePopup from '../../components/ImagePopup/ImagePopup';
 
-function Main() {
+const Main = () => {
+    const [selectedCard, setSelectedCard] = useState({});
+    const [popupActive, setPopupActive] = useState(false);
+
+    const handleClick = (card) => {
+        setPopupActive((state) => !state)
+        setSelectedCard(card)
+        if (popupActive) {
+            document.body.style.overflow = 'auto';
+        } else {
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
     return (
-        <main className="main">
-            <Promo />
-            <NavTab />
-            <AboutProject />
-            <Techs />
-            <AboutMe />
-            <Portfolio />
-        </main>
+        <>
+            <Header />
+            <MainPage />
+            <Price />
+            <Portfolio onCardClick={handleClick}/>
+            <Reviews />
+            <Contacts />
+            <Footer />
+            <Upward />
+            <ImagePopup imagePopupActive={popupActive} setImagePopupActive={setPopupActive} card={selectedCard}/>
+        </>
     )
 }
 
